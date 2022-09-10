@@ -48,8 +48,7 @@ const template = (managers, engineers, interns) => {
 
 letHtmlIntern = "";
 interns.forEach((intern) => {
-  htmlEngineer += (
-    <div class="card" style="width: 18rem">
+  htmlEngineer += `<div class="card" style="width: 18rem">
       <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">${internObj.getName()}</h5>
@@ -60,8 +59,7 @@ interns.forEach((intern) => {
         <li class="list-group-item">Email: ${internObj.getEmail()}</li>
         <li class="list-group-item">School: ${internObj.getSchool()}</li>
       </ul>
-    </div>
-  );
+    </div>`;
 });
 
 htmlSection = htmlSection.replace("<!--manager-->");
