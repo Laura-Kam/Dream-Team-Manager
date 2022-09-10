@@ -62,9 +62,9 @@ const template = (managers, engineers, interns) => {
   });
 };
 
-htmlSection = htmlSection.replace("<!--manager-->");
-htmlSection = htmlSection.replace("<!--engineers-->");
-htmlSection = htmlSection.replace("<!--intern-->");
+htmlPage = htmlPage.replace("<!--manager-->");
+htmlPage = htmlPage.replace("<!--engineers-->");
+htmlPage = htmlPage.replace("<!--intern-->");
 
 //function that creates manager section
 
