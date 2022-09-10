@@ -44,24 +44,7 @@ function init() {
         newEmployee();
       });
   }
-  //function to initialise Manager:
 
-  // function newEmployee() {
-  //   inquirer
-  //     .prompt([
-  //         {
-  //             type: "list",
-  //             message: "What would you like to do?",
-  //             name: "action",
-  //             choices: [
-  //               "Create a manager",
-  //               "Create an engineer",
-  //               "Create an intern",
-  //               "Build the team",
-  //             ],
-  //           }])}
-
-  //  a function after manager is created to create manager card:
   function newEmployee() {
     inquirer
       .prompt([

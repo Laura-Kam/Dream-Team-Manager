@@ -9,7 +9,7 @@ const team = [];
 //open the template html file:
 
 const template = (managers, engineers, interns) => {
-  let htmlPage = fs.readFileSync("index.html", "utf-8");
+  let htmlPage = fs.readFileSync("./index.html", "utf-8");
   if (htmlPage) {
     //add managers
     let htmlManager = "";
@@ -60,11 +60,10 @@ const template = (managers, engineers, interns) => {
       </ul>
     </div>`;
   });
+  htmlPage = htmlPage.replace("<!--manager-->");
+  htmlPage = htmlPage.replace("<!--engineers-->");
+  htmlPage = htmlPage.replace("<!--intern-->");
 };
-
-htmlPage = htmlPage.replace("<!--manager-->");
-htmlPage = htmlPage.replace("<!--engineers-->");
-htmlPage = htmlPage.replace("<!--intern-->");
 
 //function that creates manager section
 
@@ -74,6 +73,8 @@ htmlPage = htmlPage.replace("<!--intern-->");
 
 //write to file. etc..
 
-fs.writeFileSync("./dist/myteam.html", html, "utf-8");
+fs.writeFileSync("./dist/myteam.html", htmlPage, "utf-8");
 
 console.log("team built on page");
+
+module.exports = template;
