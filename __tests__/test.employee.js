@@ -62,6 +62,8 @@ describe("Constructor method getId", () => {
   });
 });
 
+//testing getEmail
+
 describe("Constructor method getEmail", () => {
   test("Can set name via constructor method getEmail", () => {
     const myEmail = "laurag@gmail.com";
@@ -72,12 +74,11 @@ describe("Constructor method getEmail", () => {
   });
 });
 
+//testing getRole
+
 describe("Constructor method getRole", () => {
   test("Can set name via constructor method getRole", () => {
-    const myRole = "engineer";
-
-    const elementD = new Employee(getRole());
-
-    expect(elementD).toEqual("engineer");
+    let employee = new Employee();
+    expect(employee.getRole()).toBe("employee");
   });
 });
