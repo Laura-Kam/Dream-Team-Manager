@@ -2,30 +2,30 @@ const Engineer = require("../lib/engineer");
 
 describe("Constructor name", () => {
   test("Can set name via constructor argument", () => {
-    const testName1 = "Laura";
+    const testName4 = "Laura";
 
-    const element1 = new Engineer(testName);
+    const element4 = new Engineer(testName4);
 
-    expect(element1.name).toBe(testName1);
+    expect(element4.name).toBe(testName4);
   });
 });
 
 describe("Constructor id", () => {
   test("Can set id via constructor argument", () => {
-    const testId = 1;
+    const testId5 = 1;
 
-    const element = new Employee("laura-k@yahoo.co.uk", testId);
+    const element4 = new Engineer("laura", testId5);
 
-    expect(element.id).toBe(testId);
+    expect(element4.id).toBe(testId5);
   });
 });
 
-describe("Constructor id", () => {
-  test("Can set id via constructor argument", () => {
-    const testId = "1";
+describe("Constructor email", () => {
+  test("Can set email via constructor argument", () => {
+    const testEmail6 = "laura@gmail.com";
 
-    const element = new Employee("laura-k@yahoo.co.uk", testId);
+    const element6 = new Engineer("laura", 1, testEmail6);
 
-    expect(element.id).toBe(testId);
+    expect(element6.email).toBe(testEmail6);
   });
 });
