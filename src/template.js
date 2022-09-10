@@ -1,7 +1,7 @@
-const employeeClass = require("./lib/employee");
-const engineerObj = require("./lib/engineer");
-const internObj = require("./lib/intern");
-const managerObj = require("./lib/manager");
+const employeeClass = require("../lib/employee");
+const engineerObj = require("../lib/engineer");
+const internObj = require("../lib/intern");
+const managerObj = require("../lib/manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const team = [];
@@ -30,7 +30,7 @@ const template = (managers, engineers, interns) => {
   }
   //create engineer:
   let htmlEngineer = "";
-  engineers.array.forEach((engineer) => {
+  engineers.forEach((engineers) => {
     htmlEngineer += `<div class="card" style="width: 18rem">
       <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
@@ -44,11 +44,10 @@ const template = (managers, engineers, interns) => {
       </ul>
     </div>`;
   });
-};
 
-letHtmlIntern = "";
-interns.forEach((intern) => {
-  htmlEngineer += `<div class="card" style="width: 18rem">
+  letHtmlIntern = "";
+  interns.forEach((intern) => {
+    htmlEngineer += `<div class="card" style="width: 18rem">
       <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">${internObj.getName()}</h5>
@@ -60,7 +59,8 @@ interns.forEach((intern) => {
         <li class="list-group-item">School: ${internObj.getSchool()}</li>
       </ul>
     </div>`;
-});
+  });
+};
 
 htmlSection = htmlSection.replace("<!--manager-->");
 htmlSection = htmlSection.replace("<!--engineers-->");
