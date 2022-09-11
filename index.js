@@ -6,7 +6,6 @@ const managerObj = require("./lib/manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const team = [];
-const generateHTML = require('../index.html)
 
 //do I need to require the template.js file?
 const generateHTML = require("./src/template");
