@@ -105,6 +105,7 @@ function init() {
           name: "github",
         },
       ])
+      //use the data to create a new engineer object and push that object to the team array.
       .then((responseObj) => {
         const { name, id, email, github } = responseObj;
         const engineer = new engineerObj(name, id, email, github);
@@ -139,6 +140,7 @@ function init() {
           name: "school",
         },
       ])
+      //use the data to create a new intern object and push that object to the team array.
       .then((responseObj) => {
         const { name, id, email, school } = responseObj;
         const intern = new internObj(name, id, email, school);

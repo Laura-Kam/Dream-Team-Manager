@@ -12,6 +12,18 @@ const team = [];
 //open the template html file:
 
 const template = (managers, engineers, interns) => {
+  for (let i = 0; i < team.length; i++) {
+    if (team === "Manager") {
+      htmlManager(team.Manager[i]);
+    }
+    if (team === "Engineer") {
+      htmlEngineer(team.Engineer[i]);
+    }
+    if (team === "Intern") {
+      letHtmlIntern(team.Intern[i]);
+    }
+  }
+
   let htmlPage = fs.readFileSync("index.html", "utf-8");
   if (htmlPage) {
     //add managers
