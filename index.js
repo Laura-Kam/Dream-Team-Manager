@@ -167,5 +167,3 @@ function writeToFile() {
     err ? console.log(err) : console.log("Success!")
   );
 }
-
-module.exports = newEmployee();
