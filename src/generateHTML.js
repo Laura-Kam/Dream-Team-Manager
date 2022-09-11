@@ -65,25 +65,24 @@ const createTeam = (team) => {
       </ul>
     </div>`;
   };
+
+  TeamArray.push(
+    team
+      .filter((employee) => employee.getRole() === "Manager")
+      .map((manager) => generateManager(manager))
+  );
+
+  TeamArray.push(
+    TextEncoderStream.filter(
+      (employee) => employee.getRole() === "Engineer"
+    ).map((engineer) => generateEngineer(engineer))
+  );
+
+  TeamArray.push(
+    team
+      .filter((employee) => employee.getRole() === "Intern")
+      .map((intern) => generateIntern(intern))
+  );
+
+  return TeamArray.join("");
 };
-TeamArray.push(
-  team
-    .filter((employee) => employee.getRole() === "Manager")
-    .map((manager) => generateManager(manager))
-);
-
-TeamArray.push(
-  team
-    .filter((employee) => employee.getRole() === "Engineer")
-    .map((engineer) => generateEngineer(engineer))
-);
-
-TeamArray.push(
-  team
-    .filter((employee) => employee.getRole() === "Intern")
-    .map((intern) => generateIntern(intern))
-);
-
-return TeamArray.join("");
-
-fs.writeFile("./dist/myteam.html", htmlPage, "utf-8");
