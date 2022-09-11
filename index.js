@@ -7,8 +7,12 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const team = [];
 
-//do I need to require the template.js file?
-const generateHTML = require("./src/template");
+//creating empty strings:
+const BuildMyTeamPage = require("./src/generateHtml");
+
+const managers = [];
+const interns = [];
+const engineers = [];
 
 //initialise function in node:
 
@@ -153,3 +157,15 @@ function init() {
 }
 
 init();
+
+function writeToFile() {
+  // Defining the "data" variable for the second param.
+  const responseNeeded = BuildMyTeamPage(managers, engineers, interns);
+  // Defining the "fileName" variable to use.
+  const fileName = "./dist/indexPage.html";
+  fs.writeFile(fileName, responseNeeded, (err) =>
+    err ? console.log(err) : console.log("Success!")
+  );
+}
+
+module.exports = newEmployee();

@@ -67,19 +67,19 @@ const createTeam = (team) => {
   };
 };
 TeamArray.push(
-  team
+  createTeam
     .filter((employee) => employee.getRole() === "Manager")
     .map((manager) => generateManager(manager))
 );
 
 TeamArray.push(
-  team
+  createTeam
     .filter((employee) => employee.getRole() === "Engineer")
     .map((engineer) => generateEngineer(engineer))
 );
 
 TeamArray.push(
-  team
+  createTeam
     .filter((employee) => employee.getRole() === "Intern")
     .map((intern) => generateIntern(intern))
 );
