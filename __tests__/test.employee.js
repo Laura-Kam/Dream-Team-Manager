@@ -53,7 +53,7 @@ describe("Constructor method getName", () => {
 //testing getID method
 
 describe("Constructor method getId", () => {
-  test("Can set name via constructor method getId", () => {
+  test("Can set id via constructor method getId", () => {
     const myId = "2";
 
     const elementJ = new Employee("Sarah", myId);
@@ -65,7 +65,7 @@ describe("Constructor method getId", () => {
 //testing getEmail
 
 describe("Constructor method getEmail", () => {
-  test("Can set name via constructor method getEmail", () => {
+  test("Can set email via constructor method getEmail", () => {
     const myEmail = "laurag@gmail.com";
 
     const elementA = new Employee("Sarah", "2", myEmail);
@@ -77,7 +77,7 @@ describe("Constructor method getEmail", () => {
 //testing getRole
 
 describe("Constructor method getRole", () => {
-  test("Can set name via constructor method getRole", () => {
+  test("Can set role via constructor method getRole", () => {
     let employee = new Employee();
     expect(employee.getRole()).toBe("employee");
   });

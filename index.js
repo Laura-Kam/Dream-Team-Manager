@@ -9,7 +9,10 @@ const team = [];
 
 const template = require("./src/template");
 
+//initialise function in node:
+
 function init() {
+  //start with create manager first.
   function createManager() {
     inquirer
       .prompt([
@@ -45,6 +48,8 @@ function init() {
       });
   }
 
+  //create new employee function:
+
   function newEmployee() {
     inquirer
       .prompt([
@@ -55,6 +60,9 @@ function init() {
           choices: ["Engineer", "Intern", "I don't want to add any employees"],
         },
       ])
+
+      //if user  or employee choice is engineer, then call engineer, etc)
+
       .then((responseObj) => {
         switch (responseObj.employeeChoice) {
           case "Engineer":
@@ -69,29 +77,31 @@ function init() {
       });
   }
 
+  //create engineer function
+
   function newEngineer() {
     inquirer
       .prompt([
         {
           type: "input",
-          message: "What is the employee name?",
+          message: "What is the engineer name?",
           name: "name",
         },
 
         {
           type: "input",
-          message: "What is the employee ID?",
+          message: "What is the engineer ID?",
           name: "id",
         },
 
         {
           type: "input",
-          message: "What is the employee email?",
+          message: "What is the engineer email?",
           name: "email",
         },
         {
           type: "input",
-          message: "What is the employee github?",
+          message: "What is the engineer github?",
           name: "github",
         },
       ])
@@ -108,24 +118,24 @@ function init() {
       .prompt([
         {
           type: "input",
-          message: "What is the employee name?",
+          message: "What is the intern name?",
           name: "name",
         },
 
         {
           type: "input",
-          message: "What is the employee ID?",
+          message: "What is the intern ID?",
           name: "id",
         },
 
         {
           type: "input",
-          message: "What is the employee email?",
+          message: "What is the intern email?",
           name: "email",
         },
         {
           type: "input",
-          message: "What is the employee school?",
+          message: "What is the intern school?",
           name: "school",
         },
       ])

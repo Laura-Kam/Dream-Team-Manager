@@ -1,15 +1,18 @@
+//requiring classes and team array.
+
 const employeeClass = require("../lib/employee");
 const engineerObj = require("../lib/engineer");
 const internObj = require("../lib/intern");
 const managerObj = require("../lib/manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const questions = require("../index");
 const team = [];
 
 //open the template html file:
 
 const template = (managers, engineers, interns) => {
-  let htmlPage = fs.readFileSync("./index.html", "utf-8");
+  let htmlPage = fs.readFileSync("index.html", "utf-8");
   if (htmlPage) {
     //add managers
     let htmlManager = "";
