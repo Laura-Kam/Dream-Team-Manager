@@ -73,9 +73,9 @@ const createTeam = (team) => {
   );
 
   TeamArray.push(
-    TextEncoderStream.filter(
-      (employee) => employee.getRole() === "Engineer"
-    ).map((engineer) => generateEngineer(engineer))
+    team
+      .filter((employee) => employee.getRole() === "Engineer")
+      .map((engineer) => generateEngineer(engineer))
   );
 
   TeamArray.push(
