@@ -62,6 +62,6 @@ describe("Constructor method getSchool", () => {
 describe("Constructor method getRole", () => {
   test("Can set name via constructor method getRole", () => {
     let intern = new Intern();
-    expect(intern.getRole()).toBe("intern");
+    expect(intern.getRole()).toBe("Intern");
   });
 });

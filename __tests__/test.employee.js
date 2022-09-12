@@ -79,6 +79,6 @@ describe("Constructor method getEmail", () => {
 describe("Constructor method getRole", () => {
   test("Can set role via constructor method getRole", () => {
     let employee = new Employee();
-    expect(employee.getRole()).toBe("employee");
+    expect(employee.getRole()).toBe("Employee");
   });
 });

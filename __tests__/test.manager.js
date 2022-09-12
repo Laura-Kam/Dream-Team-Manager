@@ -68,6 +68,6 @@ describe("Constructor method getOfficeNumber", () => {
 describe("Constructor method getRole", () => {
   test("Can set name via constructor method getRole", () => {
     let manager = new Manager();
-    expect(manager.getRole()).toBe("manager");
+    expect(manager.getRole()).toBe("Manager");
   });
 });

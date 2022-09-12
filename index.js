@@ -40,15 +40,15 @@ function init() {
         },
         {
           type: "input",
-          message: "What is the employee github?",
-          name: "github",
+          message: "What is the employee office number?",
+          name: "office",
         },
       ])
       .then((responseObj) => {
-        const { name, id, email, github } = responseObj;
-        const engineer = new engineerObj(name, id, email, github);
-        team.push(engineer);
-        console.log(team);
+        const { name, id, email, office } = responseObj;
+        const manager = new managerObj(name, id, email, office);
+        team.push(manager);
+        console.log("manager", team);
         newEmployee();
       });
   }
@@ -78,6 +78,7 @@ function init() {
             break;
           default:
             console.log("generate html");
+            writeToFile();
         }
       });
   }
@@ -116,6 +117,7 @@ function init() {
         const engineer = new engineerObj(name, id, email, github);
         team.push(engineer);
         console.log(team);
+        writeToFile();
       });
   }
 
@@ -151,6 +153,7 @@ function init() {
         const intern = new internObj(name, id, email, school);
         team.push(intern);
         console.log(team);
+        writeToFile();
       });
   }
   createManager();
@@ -160,7 +163,7 @@ init();
 
 function writeToFile() {
   // Defining the "data" variable for the second param.
-  const responseNeeded = BuildMyTeamPage(managers, engineers, interns);
+  const responseNeeded = BuildMyTeamPage(team);
   // Defining the "fileName" variable to use.
   const fileName = "./dist/indexPage.html";
   fs.writeFile(fileName, responseNeeded, (err) =>

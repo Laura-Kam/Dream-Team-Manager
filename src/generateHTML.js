@@ -18,9 +18,9 @@
 //     }
 //   }
 
-const TeamArray = [];
-
 const createTeam = (team) => {
+  console.log("team", team);
+  const TeamArray = [];
   const generateManager = (manager) => {
     return `<div class="card" style="width: 18rem">
         <img src="..." class="card-img-top" alt="..." />
@@ -31,7 +31,7 @@ const createTeam = (team) => {
         <ul class="list-group list-group-flush">
           <li class="list-group-item" id="manager-id">ID:</li>
           <li class="list-group-item" id="manager-email">Email:${manager.getEmail()}</li>
-          <li class="list-group-item" id="manager-office">Office number:${manager.getOfficeeemail()}</li>
+          <li class="list-group-item" id="manager-office">Office number:${manager.getOfficeNumber()}</li>
         </ul>
       </div>`;
   };
@@ -46,7 +46,7 @@ const createTeam = (team) => {
   <ul class="list-group list-group-flush">
     <li class="list-group-item" class="engineer-id">ID:${engineer.getId()}</li>
     <li class="list-group-item" class="engineer-email">Email:${engineer.getEmail()}</li>
-    <li class="list-group-item" class="engineer-github">Github: ${engineer.getgitHub()}</li>
+    <li class="list-group-item" class="engineer-github">Github: ${engineer.getGitHub()}</li>
   </ul>
 </div>`;
   };
@@ -83,6 +83,8 @@ const createTeam = (team) => {
       .filter((employee) => employee.getRole() === "Intern")
       .map((intern) => generateIntern(intern))
   );
-
+  console.log(TeamArray);
   return TeamArray.join("");
 };
+
+module.exports = createTeam;

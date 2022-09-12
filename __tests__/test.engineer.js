@@ -49,7 +49,7 @@ describe("Constructor method getEmail", () => {
 describe("Constructor method getRole", () => {
   test("Can set name via constructor method getRole", () => {
     let engineer = new Engineer();
-    expect(engineer.getRole()).toBe("engineer");
+    expect(engineer.getRole()).toBe("Engineer");
   });
 });
 
