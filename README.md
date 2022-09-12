@@ -45,7 +45,7 @@ Clone the repository, run the application through the terminal in index.js by wr
 
 ## Features of the project
 
-Project includes rendering a html page to show information about your team.,
+Project includes rendering a html page to show information about your team.
 
 ## Link to Git-hub repo.
 
@@ -53,7 +53,7 @@ Project includes rendering a html page to show information about your team.,
 
 ## Screenshot of application:
 
-[Screenshot of website](https:............)
+[Screenshot of website](https://github.com/Laura-Kam/Dream-Team-Manager/issues/1#issue-1370506573)
 
 ## bugs
 
@@ -75,9 +75,9 @@ Project includes rendering a html page to show information about your team.,
 
 # Link to video
 
-- [Readme-quick Video Google Drive](https:......)
+- [Readme-quick Video Google Drive](https://drive.google.com/file/d/1P35032qxT5Y5CYR82vpWy7SYpYje4rNi/view)
 
-- [Readme-quick Video Screencastify](https:......)
+- [Readme-quick Video Screencastify](https://watch.screencastify.com/v/ZxMdmq1hBFPSLxlwBT4L)
 
   ## How to contribute
 
